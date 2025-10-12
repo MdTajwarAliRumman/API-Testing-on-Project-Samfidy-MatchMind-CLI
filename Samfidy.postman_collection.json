@@ -1,0 +1,4638 @@
+{
+	"info": {
+		"_postman_id": "647c3d16-93bd-4eb8-b5be-5f219536af91",
+		"name": "Samfidy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33319998",
+		"_collection_link": "https://sdf777-1475.postman.co/workspace/sdf-Workspace~fb0f8b99-5248-4bc0-8bae-c121dc277791/collection/33319998-647c3d16-93bd-4eb8-b5be-5f219536af91?action=share&source=collection_link&creator=33319998"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Joha\",\n    \"email\":\"joha110@joha.com\",\n    \"password\":\"123456\",\n    \"confirmPassword\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"joha10@joha.com\",\n    \"otp\":\"6264\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/verify-user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"verify-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"joha10@joha.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/resend-otp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"resend-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"joha10@joha.com\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user-login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"mdjohahossainm1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/user-login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"user-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"joha10@joha.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/forgot-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"joha10@joha.com\",\n    \"otp\":\"8445\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/verify-otp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPassword\": \"12345678@\",\n    \"token\":\"17ae695f8e5b912c68a5f4c160063918e9f11041e7197a8fb526e6bd2573c737\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/reset-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"reset-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPassword\": \"12345678\",\n    \"currentPassword\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/password-change",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"password-change"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cms",
+			"item": [
+				{
+					"name": "socails",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "platform",
+											"value": "Tiktok",
+											"type": "text"
+										},
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-05-31 at 12.22.45 PM.png"
+										},
+										{
+											"key": "url",
+											"value": "https://www.facebook.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/social",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"social"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "platform",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-05-31 at 12.29.48 PM.png"
+										},
+										{
+											"key": "url",
+											"value": "https://www.instagram.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/social/683aa18d0d26ffde017f20c3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"social",
+										"683aa18d0d26ffde017f20c3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "platform",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "icon",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-05-31 at 12.29.48 PM.png"
+										},
+										{
+											"key": "url",
+											"value": "https://www.instagram.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/social/683aa1a00d26ffde017f20c6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"social",
+										"683aa1a00d26ffde017f20c6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/social",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"social"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "company-info",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "logoDark",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-26 at 9.43.50 AM.png"
+										},
+										{
+											"key": "logoWhite",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-26 at 9.43.41 AM.png"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet consectetur. Et fermentum sagittis viverra mi egestas at feugiat. Elementum turpis proin magna eu ullamcorper sem.",
+											"type": "text"
+										},
+										{
+											"key": "copyright",
+											"value": "© 2024 Fully Decked Up. All rights reserved",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/company-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "logoDark",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-05-31 at 12.59.08 PM.png",
+											"disabled": true
+										},
+										{
+											"key": "logoWhite",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-05-31 at 2.32.26 PM.png"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet consectetur. Et fermentum sagittis viverra mi egestas at feugiat. Elementum turpis proin magna eu ullamcorper sem.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "copyright",
+											"value": "© 2025 Fully Decked Up. All rights reserved",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/company-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/company-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/company-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"company-info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact-info",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"example@gmail.com\",\n    \"phone\":\"01234982394\",\n    \"address\":\"Dhaka,Bangladesh\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"email\":\"example@gmail.com\",\n    \"phone\":\"01734982394\"\n    // \"address\":\"Dhaka,Bangladesh\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "buy-sell-snap",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image (1).png"
+										},
+										{
+											"key": "title",
+											"value": "Buy or sell in a Snap.",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Contact Us",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/buy-sell-snap",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"buy-sell-snap"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "Buy or sell in a Snap.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "buttonText",
+											"value": "Contact us",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/buy-sell-snap",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"buy-sell-snap"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "Buy or sell in a Snap.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "buttonText",
+											"value": "Contact us",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/buy-sell-snap",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"buy-sell-snap"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "Buy or sell in a Snap.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "buttonText",
+											"value": "Contact us",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/buy-sell-snap",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"buy-sell-snap"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "homeHero",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Search by Category",
+											"type": "text"
+										},
+										{
+											"key": "subcategory",
+											"value": "Search by Subcategory",
+											"type": "text"
+										},
+										{
+											"key": "make",
+											"value": "make",
+											"type": "text"
+										},
+										{
+											"key": "keyword",
+											"value": "keyword",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Search",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/856181-hd_1920_1080_30fps.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/home-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"home-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Search by category",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "subcategory",
+											"value": "Search by subcategory",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "make",
+											"value": "make",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "keyword",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "buttonText",
+											"value": "Search",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "content",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Desktop/bannerVideo.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/home-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"home-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Search by Category",
+											"type": "text"
+										},
+										{
+											"key": "subcategory",
+											"value": "Search by Subcategory",
+											"type": "text"
+										},
+										{
+											"key": "make",
+											"value": "make",
+											"type": "text"
+										},
+										{
+											"key": "keyword",
+											"value": "keyword",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Search",
+											"type": "text"
+										},
+										{
+											"key": "video",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/856181-hd_1920_1080_30fps.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/home-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"home-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Search by Category",
+											"type": "text"
+										},
+										{
+											"key": "subcategory",
+											"value": "Search by Subcategory",
+											"type": "text"
+										},
+										{
+											"key": "make",
+											"value": "make",
+											"type": "text"
+										},
+										{
+											"key": "keyword",
+											"value": "keyword",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Search",
+											"type": "text"
+										},
+										{
+											"key": "video",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/856181-hd_1920_1080_30fps.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/home-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"home-hero"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "hotPicks",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"Snappy's Hot Picks Bite-sized deals. Big-time value.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"Snappy's Hot Picks Bite-sized deals. Big-time value, Big Prices\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick/section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick",
+										"section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "2017 FTE 16 Pallet, Tri Zone, Tail gate",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image (1).png"
+										},
+										{
+											"key": "price",
+											"value": "2190",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Dhaka,Bangladesh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick/add-item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick",
+										"add-item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update item",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "2017 FTE 16 Pallet, Tri Zone, Tail gate",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/johah/Downloads/truck2.png"
+										},
+										{
+											"key": "price",
+											"value": "219034",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "location",
+											"value": "Dhaka,Bangladesh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick/update-item/68b7a9852d270cb4912790d7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick",
+										"update-item",
+										"68b7a9852d270cb4912790d7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "2017 FTE 16 Pallet, Tri Zone, Tail gate",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/30c09c8ac9fcab408614b60b723748a443754a3b.png"
+										},
+										{
+											"key": "price",
+											"value": "219034",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "location",
+											"value": "Dhaka,Bangladesh",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick/delete-item/683d4c83ad77a845e86976b3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick",
+										"delete-item",
+										"683d4c83ad77a845e86976b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "2017 FTE 16 Pallet, Tri Zone, Tail gate",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image (1).png"
+										},
+										{
+											"key": "price",
+											"value": "2190",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Dhaka,Bangladesh",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/hot-pick",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"hot-pick"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "howItWorks",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"How it works\",\n    \"sectionSubTitle\":\"Buying or selling a trailer has never been easier. Our platform is built to make the process simple, fast, and hassle-free. Just follow a few easy steps to get started and you're on your way.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"How it works\",\n    \"sectionSubTitle\":\"Buying or selling a trailer has never been easier. Our platform is built to make the process simple, fast, and hassle-free. Just follow a few easy steps to get started and you're on your way.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works/update-section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works",
+										"update-section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add step",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Connect and deal directly",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet consectetur. Euismod integer dignissim mollis diam nisl sed. Tellus volutpat tortor arcu nisl.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/Frame (2).svg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works/add-step",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works",
+										"add-step"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update step",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Connect and deal directly",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor sit amet consectetur. Euismod integer dignissim mollis diam nisl sed. Tellus volutpat tortor arcu nisl.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/Frame (2).svg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works/update-step/683d67c7ac18d21f44f130d1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works",
+										"update-step",
+										"683d67c7ac18d21f44f130d1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete step",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works/delete-step/683d67c7ac18d21f44f130d1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works",
+										"delete-step",
+										"683d67c7ac18d21f44f130d1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/how-it-works",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"how-it-works"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "testimonials",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"What our client say about us\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionTitle\":\"What our client say about us\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials/update-section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials",
+										"update-section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create testimonial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Atikur Ahad",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "buyer",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Lorem ipsum dolor sit amet consectetur. Vitae hac morbi ultrices tinci dunt quam nisl. Enim cursus non consectetur dui risus. Non con seq uat arcu mattis pretium et amet est sit. Lorem ipsum dolor sit amet con sec tetur. Vitae hac morbi ultrices tincidunt quam nisl. En im cursus non consectetur dui risus. Non consequat arcu mattis pret ium et amet est sit.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials/add-item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials",
+										"add-item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update testimonial",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Atikur Rahman Ahad",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "seller",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Lorem ipsum dolor sit amet consectetur. Vitae hac morbi ultrices tinci dunt quam nisl. Enim cursus non consectetur dui risus. Non con seq uat arcu mattis pretium et amet est sit. Lorem ipsum dolor sit amet con sec tetur. Vitae hac morbi ultrices tincidunt quam nisl. En im cursus non consectetur dui risus. Non consequat arcu mattis pret ium et amet est sit.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials/update-item/683d88a6224500ae2c5bf6f7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials",
+										"update-item",
+										"683d88a6224500ae2c5bf6f7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete testimonial",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Atikur Rahman Ahad",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "seller",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Lorem ipsum dolor sit amet consectetur. Vitae hac morbi ultrices tinci dunt quam nisl. Enim cursus non consectetur dui risus. Non con seq uat arcu mattis pretium et amet est sit. Lorem ipsum dolor sit amet con sec tetur. Vitae hac morbi ultrices tincidunt quam nisl. En im cursus non consectetur dui risus. Non consequat arcu mattis pret ium et amet est sit.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials/delete-item/683d88a6224500ae2c5bf6f7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials",
+										"delete-item",
+										"683d88a6224500ae2c5bf6f7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Atikur Rahman Ahad",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "seller",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Lorem ipsum dolor sit amet consectetur. Vitae hac morbi ultrices tinci dunt quam nisl. Enim cursus non consectetur dui risus. Non con seq uat arcu mattis pretium et amet est sit. Lorem ipsum dolor sit amet con sec tetur. Vitae hac morbi ultrices tincidunt quam nisl. En im cursus non consectetur dui risus. Non consequat arcu mattis pret ium et amet est sit.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/images.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/testimonials",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"testimonials"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "about Hero",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/about-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "About Us",
+											"type": "text"
+										},
+										{
+											"key": "sectionSubtitle",
+											"value": "From heavy-duty haulers to light utility trailers — find it all here.",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/8eb0e897da1c94bfc350025bb628efd3a26e371b.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/about-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "About Us",
+											"type": "text"
+										},
+										{
+											"key": "sectionSubtitle",
+											"value": "From heavy-duty haulers to light utility trailers — find it all here.",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/8eb0e897da1c94bfc350025bb628efd3a26e371b.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/about-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "About Us",
+											"type": "text"
+										},
+										{
+											"key": "sectionSubtitle",
+											"value": "From heavy-duty haulers to light utility trailers — find it all here.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "content",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/8eb0e897da1c94bfc350025bb628efd3a26e371b.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/about-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-hero"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "aboutUs",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "axsadwqdsqwdwqdeqwdewqfewe",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "sdafewfewfewewdfewfewrfewfwerfrqw34frt43t54rtgerwfturehwiuf fgv45tuiehrgiruewht945 eriougtu45tjgiogm g er2ioupgtjtjngt hfgiojn45 ",
+											"type": "text"
+										},
+										{
+											"key": "image1",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image_2025-06-02_16-04-55.png"
+										},
+										{
+											"key": "image2",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image_2025-06-02_16-04-55.png"
+										},
+										{
+											"key": "image3",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/image_2025-06-02_16-04-55.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/about-us",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-us"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "About Us",
+											"type": "text"
+										},
+										{
+											"key": "sectionDescription",
+											"value": "Lorem ipsum dolor sit amet consectetur. Leo ipsum ipsum euismod non mattis commodo. Lectus donec vulputate vulputate ut adipiscing in. Ac et nec imperdiet diam. Tortor blandit faucibus magna mi suspendisse potenti amet aliquam euismod. Varius magnis scelerisque habitant facilisi risus. Quis phasellus commodo varius egestas. Dui aliquet interdum mi molestie non ultricies fringilla habitasse gravida. Maecenas volutpat erat congue turpis malesuada ac malesuada. Vitae sit quam nunc nulla sem mattis adipiscing mi. Fringilla faucibus praesent at scelerisque.   Cras vulputate odio accumsan sit. Lorem ipsum dolor sit amet consectetur. Leo ipsum ipsum euismod non mattis commodo. Lectus donec vulputate vulputate ut adipiscing in. Ac et nec imperdiet diam. Tortor blandit faucibus magna mi suspendisse potenti amet aliquam euismod. Varius magnis scelerisque habitant facilisi risus.   Quis phasellus commodo varius egestas. Dui aliquet interdum mi molestie non ultricies fringilla habitasse gravida. Maecenas volutpat erat congue turpis malesuada ac malesuada. Vitae sit quam nunc nulla sem mattis adipiscing mi. Fringilla faucibus praesent at scelerisque. Cras vulputate odio accumsan sit.",
+											"type": "text"
+										},
+										{
+											"key": "image1",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/489df2beffaa009322335e87a4e6f56161178ca6.png"
+										},
+										{
+											"key": "image2",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/1626f1805f32f1d6528eec0de6dc6d67dc01c15b.png"
+										},
+										{
+											"key": "image3",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/c303076c5e92375840a35c69242cb77dd524da8d.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/about-us",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-us"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/about-us",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-us"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/about-us",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about-us"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "whoWeAre",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Who we are",
+											"type": "text"
+										},
+										{
+											"key": "sectionSubTitle",
+											"value": "Buying or selling a trailer has never been easier. Our platform is built to make the process simple, fast, and hassle-free. Just follow a few easy steps to get started and you're on your way.",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Know more about us",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/1c66b80f0399ff21290f3a5275e189941efd2dc6.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Who we are",
+											"type": "text"
+										},
+										{
+											"key": "sectionSubTitle",
+											"value": "Buying or selling a trailer has never been easier. Our platform is built to make the process simple, fast, and hassle-free. Just follow a few easy steps to get started and you're on your way.",
+											"type": "text"
+										},
+										{
+											"key": "buttonText",
+											"value": "Know more about us",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/1c66b80f0399ff21290f3a5275e189941efd2dc6.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are/update-section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are",
+										"update-section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create stat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Seller\",\n    \"value\":\"150+\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are/create-stat",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are",
+										"create-stat"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update stat",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Seller\",\n    \"value\":\"150+\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are/update-stat/683edaba58a1406bb176ed9b",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are",
+										"update-stat",
+										"683edaba58a1406bb176ed9b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete stat",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Seller\",\n    \"value\":\"150+\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are/delete-stat/683edaba58a1406bb176ed9b",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are",
+										"delete-stat",
+										"683edaba58a1406bb176ed9b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Seller\",\n    \"value\":\"150+\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/who-we-are",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"who-we-are"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "whyChooseUs",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Why choose us",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Why choose us",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/johah/Downloads/truck2.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us/update-section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us",
+										"update-section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create point",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"24/7 Support\",\n    \"des\":\"Our support team is always available to assist you with any issues.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us/add-point",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us",
+										"add-point"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update point",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"24/7 Support\",\n    \"des\":\"Our support team is always available to assist you with any issues.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us/update-point/683fdd0db52cb5d089c0e3cd",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us",
+										"update-point",
+										"683fdd0db52cb5d089c0e3cd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete point",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us/delete/683fdd6cb52cb5d089c0e3dc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us",
+										"delete",
+										"683fdd6cb52cb5d089c0e3dc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/why-choose-us",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"why-choose-us"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contactHero",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Welcome! How can we help you?",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Welcome! How can we help you?",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/d894330dd4526e2f8e138508708151ba7bd0b051.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionTitle",
+											"value": "Welcome! How can we help you?",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-hero"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contactUsContent",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "formTitle",
+											"value": "Contact Us",
+											"type": "text"
+										},
+										{
+											"key": "formSubTitle",
+											"value": "Lorem ipsum leo tellus quam risus eget tempus integer.",
+											"type": "text"
+										},
+										{
+											"key": "helpTitle",
+											"value": "We’re here to help.",
+											"type": "text"
+										},
+										{
+											"key": "helpSubTitle",
+											"value": "We’re here to help.",
+											"type": "text"
+										},
+										{
+											"key": "image1",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										},
+										{
+											"key": "image2",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										},
+										{
+											"key": "image3",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										},
+										{
+											"key": "image4",
+											"type": "file",
+											"src": "/Users/bdcalling/Desktop/Screenshot 2025-06-04 at 11.26.34 AM.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "formTitle",
+											"value": "Contact Us",
+											"type": "text"
+										},
+										{
+											"key": "formSubTitle",
+											"value": "Lorem ipsum leo tellus quam risus eget tempus integer.",
+											"type": "text"
+										},
+										{
+											"key": "helpTitle",
+											"value": "We’re here to help.",
+											"type": "text"
+										},
+										{
+											"key": "helpSubTitle",
+											"value": "We’re here to help.",
+											"type": "text"
+										},
+										{
+											"key": "image1",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/0f10327edd21411ccdd1f450e908243559cc70d3.png"
+										},
+										{
+											"key": "image2",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/5297c0b9fb61365921c984c381dcbbb3dd263e7a.png"
+										},
+										{
+											"key": "image3",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/5297c0b9fb61365921c984c381dcbbb3dd263e7a (1).png"
+										},
+										{
+											"key": "image4",
+											"type": "file",
+											"src": "/Users/bdcalling/Downloads/0f10327edd21411ccdd1f450e908243559cc70d3 (1).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/contact-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contact-content"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sellHero",
+					"item": [
+						{
+							"name": "create section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add content",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Create An Ad\",\r\n    \"des\":\"Lorem ipsum dolor sit amet consectetur. Et fermentum sagittis viverra mi egestas at feugiat.\",\r\n    \"buttonText\":\"Create Ad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero/add-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero",
+										"add-content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update content",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Create an Ad\",\r\n    \"des\":\"Lorem ipsum dolor sit amet consectetur. Et fermentum sagittis viverra mi egestas at feugiat.\",\r\n    \"buttonText\":\"Create Ad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero/update-content/6847d16ebd9a218cc573dad7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero",
+										"update-content",
+										"6847d16ebd9a218cc573dad7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update content Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero/remove-content/6847d16ebd9a218cc573dad7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero",
+										"remove-content",
+										"6847d16ebd9a218cc573dad7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update section",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/sell-hero/update-section",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sell-hero",
+										"update-section"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "footer",
+					"item": [
+						{
+							"name": "footer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/footer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"footer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "signUp & suignIn & forgot pass",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text"
+										},
+										{
+											"key": "des",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "signInText",
+											"value": "Sign In",
+											"type": "text"
+										},
+										{
+											"key": "signUpText",
+											"value": "Sign Up",
+											"type": "text"
+										},
+										{
+											"key": "subTitleBuyer",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "subTitleSeller",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/image.png"
+										},
+										{
+											"key": "forgotTitle",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "otpTitle",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "resetTitle",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/sign",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "des",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "signInText",
+											"value": "Sign In",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "signUpText",
+											"value": "Sign Up",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "subTitleBuyer",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "subTitleSeller",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/8eb0e897da1c94bfc350025bb628efd3a26e371b.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/sign",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/sign",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "A smarter way to buy and sell - Cars, Boats, Bikes, Trailers, Trucks, Machinery, Property and more.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "des",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "signInText",
+											"value": "Sign In",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "signUpText",
+											"value": "Sign Up",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "subTitleBuyer",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "subTitleSeller",
+											"value": "Neatly Organised Made To Move. Browse by category, discover featured deals, or promote your listings today.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/8eb0e897da1c94bfc350025bb628efd3a26e371b.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/sign",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sign"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pricePage",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Congratulations!",
+											"type": "text"
+										},
+										{
+											"key": "subTitle",
+											"value": "Lorem ipsum dolor sit amet consectetur. Magna amet et viverra porta fermentum amet commodo. Eget urna condimentum urna quis quis. Morbi non orci adipiscing nulla tellus convallis.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Desktop/Screenshot_1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pricing",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Congratulations!,sir",
+											"type": "text"
+										},
+										{
+											"key": "subTitle",
+											"value": "Lorem ipsum dolor sit amet consectetur. Magna amet et viverra porta fermentum amet commodo. Eget urna condimentum urna quis quis. Morbi non orci adipiscing nulla tellus convallis.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pricing",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Congratulations!,sir",
+											"type": "text"
+										},
+										{
+											"key": "subTitle",
+											"value": "Lorem ipsum dolor sit amet consectetur. Magna amet et viverra porta fermentum amet commodo. Eget urna condimentum urna quis quis. Morbi non orci adipiscing nulla tellus convallis.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Md.Sholayman/Downloads/image.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pricing",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pricing"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pricePlan and feature",
+					"item": [
+						{
+							"name": "create plan",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Professional Plan\",\n  \"price\": 1000,\n  \"unit\": \"Month\",\n  \"highlighted\": false,\n  \"buttonText\": \"Purchase Now\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create features",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"planId\": \"684a57efabc735f9fec501b4\",\n  \"texts\": [\n    \"Limited projects\",\n    \"24/7 customer support\",\n    \"No Advanced analytics dashboard\",\n    \"No Team collaboration tools\",\n    \"No Custom integrations\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/feature",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"feature"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update feature",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"text\": \"No 24/7 customer support\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/feature/684a5ad1bfa65c684f19a9b3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"feature",
+										"684a5ad1bfa65c684f19a9b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete feature",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"text\": \"No 24/7 customer support\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/feature/684a5ad1bfa65c684f19a9b3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"feature",
+										"684a5ad1bfa65c684f19a9b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all features",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/feature?planId=684a57efabc735f9fec501b4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"feature"
+									],
+									"query": [
+										{
+											"key": "planId",
+											"value": "684a57efabc735f9fec501b4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get price plan",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update plan",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Professional Plan\",\n  \"price\": 1000,\n  \"unit\": \"Monthly\",\n  \"highlighted\": false,\n  \"buttonText\": \"Purchase Never\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plan/684a583dabc735f9fec501c1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plan",
+										"684a583dabc735f9fec501c1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete plan",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Professional Plan\",\n  \"price\": 1000,\n  \"unit\": \"Monthly\",\n  \"highlighted\": false,\n  \"buttonText\": \"Purchase Never\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plan/68494c966dd7e5bfa6a56ad2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plan",
+										"68494c966dd7e5bfa6a56ad2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "get profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Joy\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/user/683d5c6fbe5c6da1007f0022",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"683d5c6fbe5c6da1007f0022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/user/68383374ef27a7e8d4b6d221",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"68383374ef27a7e8d4b6d221"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Football",
+			"item": [
+				{
+					"name": "Favourite Leagues",
+					"item": [
+						{
+							"name": "Add Favourite",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"68ca73b35ccf408cd7bb875b\",\n  \"leagueId\": 2021,\n  \"leagueName\": \"Premier League\",\n  \"leagueCode\": \"PL\",\n  \"leagueType\": \"LEAGUE\",\n  \"leagueEmblem\": \"https://crests.football-data.org/PL.png\",\n  \"leaguePlan\": \"TIER_ONE\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/football/add-favourite",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"add-favourite"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove from fevourite",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/remove-favourite/68d4fb5b587c2e1bdf5b8ab0",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"remove-favourite",
+										"68d4fb5b587c2e1bdf5b8ab0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Favourite Leagues",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/all-favourite-leagues",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"all-favourite-leagues"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Favourite Team",
+					"item": [
+						{
+							"name": "Add Favourite",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teamId\": 9,\n  \"name\": \"Hertha BSC\",\n  \"shortName\": \"Hertha BSC\",\n  \"tla\": \"BSC\",\n  \"crest\": \"https://crests.football-data.org/9.png\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/football/add-favourite-team",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"add-favourite-team"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove from fevourite",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/remove-favourite-team/68d4f9103d5747293e38c626",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"remove-favourite-team",
+										"68d4f9103d5747293e38c626"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favourites Teams",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/favourite-teams",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"favourite-teams"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Player",
+					"item": [
+						{
+							"name": "Add Favourite",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"playerId\": 1230,\n            \"playerName\": \"Fábio\",\n            \"position\": \"Goalkeeper\",\n            \"nationality\": \"Brazil\",\n            \"teamId\": 1765,\n            \"teamName\": \"Fluminense FC\"\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/football/add-favourite-player",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"add-favourite-player"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove from fevourite",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/football/remove-favourite-player/1230",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"remove-favourite-player",
+										"1230"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch favourite players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/all-favourite-players",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"all-favourite-players"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch all Players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/football/all-players",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"football",
+										"all-players"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-rapidapi-key",
+								"value": "df489b4a08mshd7e955627b3506dp13d59cjsna10f376edc81",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-rapidapi-host",
+								"value": "v3.football.api-sports.io",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/football/matches?date=2025-09-25",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"matches"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-09-25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Upcomming Matches",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-apisports-key",
+								"value": "02219f59ec6627c23ab5a335fa3781ee",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/matches/upcomming",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"matches",
+								"upcomming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Match Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/stats/215662",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"stats",
+								"215662"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Match Summary",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/summary/215662",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"summary",
+								"215662"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Match Comomentary",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/commentary/1379566",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"commentary",
+								"1379566"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Match Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/matches/1379566",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"matches",
+								"1379566"
+							],
+							"query": [
+								{
+									"key": "leagueId",
+									"value": "39",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "2025",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Line Up",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/matches/1379566/lineup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"matches",
+								"1379566",
+								"lineup"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Table",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/competitions/2013/standings?leagueId=39&season=2025",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"competitions",
+								"2013",
+								"standings"
+							],
+							"query": [
+								{
+									"key": "leagueId",
+									"value": "39"
+								},
+								{
+									"key": "season",
+									"value": "2025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Compairsions Not completed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/teams/332?competitionId=2016",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"teams",
+								"332"
+							],
+							"query": [
+								{
+									"key": "competitionId",
+									"value": "2016"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Today Matches",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\":\"2025-10-08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/today-matches?limit=5&page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"today-matches"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch by Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\":\"2025-09-25T00:00:00+00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/football/match-date?date=2025-10-08",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"match-date"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-10-08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tommrow Matches",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/football/tommorrow-matches?page=1&limit=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"tommorrow-matches"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yesterday Matches",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/football/yesterday-matches?page=1&limit=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"yesterday-matches"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top Leagues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "99c023fbd0af4bccb1bb66b6af75264c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/football/leagues/top-leagues?page=1&limit=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"football",
+								"leagues",
+								"top-leagues"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Send Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"ogooo sunsooo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/chat/ai",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat",
+								"ai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Conversation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/our-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"our-message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Conversation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/chat-all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"chat-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Chat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"hi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/chat-delete/68ca73b35ccf408cd7bb875b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"chat-delete",
+								"68ca73b35ccf408cd7bb875b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5005/api/v1",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "https://fushiontech-mern-express.onrender.com/api/v1"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgzMzc0ZWYyN2E3ZThkNGI2ZDIyMSIsImVtYWlsIjoic2hvbGF5bWFuYmRjYWxsaW5nQGdtYWlsLmNvbSIsImlzQnV5ZXIiOnRydWUsImlzU2VsbGVyIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NTEwODQ3MzAsImV4cCI6MTc1MTM0MzkzMH0.FBWWmlGazR-51dTf_0pmKXhmbx37fjxy4g4QNQtStz0",
+			"disabled": true
+		}
+	]
+}
