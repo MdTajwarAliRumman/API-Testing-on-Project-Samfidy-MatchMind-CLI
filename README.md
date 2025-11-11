@@ -29,7 +29,7 @@ The main goals of this project are given below:
 📰 Football News — Stay updated with the latest football updates and stories 
 
 ---
-## 🖼️ Screenshot of the Mobile App
+## 🖼️ Screenshots of the Mobile App
 <details>
   <summary>Click to view Screenshots</summary>
   
